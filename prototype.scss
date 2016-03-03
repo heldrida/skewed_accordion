@@ -1,0 +1,146 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,700);
+
+body {
+	color: #9c89b8;
+	background: #f0e6ef;
+	font-family: 'Roboto Condensed', sans-serif;
+}
+
+h1 {
+	color: #f0a6ca;
+	letter-spacing: 3px;
+	line-height: normal;
+	margin: 50px auto 0 auto;
+	display: block;
+	text-align: center;
+	font-weight: 600;
+	font-size: 30px;
+}
+
+p {
+	font-size: 16px;
+	letter-spacing: 3px;
+	font-weight: 100;
+	text-align: center;
+}
+
+.gallery-wrp {
+	position: relative;
+	width: calc(100% - 80px);
+	max-width: 1200px;
+	margin: 0 40px;
+	height: 300px;
+	overflow: hidden;
+	background: #999;
+	margin: 50px auto;	
+	* {
+		backface-visibility: hidden;
+	}
+	ul {
+		position: absolute;
+		top: 0;
+		left: 0;
+		display: block;
+		pointer-events: none;
+		width: 100%;
+		height: 100%;
+		display: block;
+		margin: 0;
+		padding: 0;
+		z-index: 2;
+		li {
+			width: 33.33%;
+			height: 100%;
+			float: left;
+			display: block;
+			text-align: center;
+			position: relative;
+			h5 {
+				color: #fff;
+				font-size: 32px;
+				font-weight: 100;
+				letter-spacing: 3px;
+				display: inline-block;
+				margin: 0;
+				padding: 0;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translateY(-50%) translateX(-50%);
+			}
+		}
+	}
+	.gallery-expand {
+		background: #eee;
+		width: 105%;
+		height: 200%;
+		margin: 0 auto;
+		position: relative;
+		transform: rotate(10deg);
+		left: -2.265%;
+		top: -50%;
+		.item {
+			position: absolute;
+			width: 33.33%;
+			height: 200%;
+			top: -50%;
+			left: 0;
+			cursor: pointer;
+			&.item-1 {
+				left: 0%;
+			}
+			&.item-2 {
+				left: 33.33%;
+			}
+			&.item-3 {
+				left: auto;
+				right: 0%;
+			}
+			
+			h5 {
+				font-size: 32px;
+				color: #fefefe;
+				line-height: auto;
+				letter-spacing: 2px;
+				z-index: 999;
+				display: block;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translateY(-50%) translateX(-50%) rotate(-10deg);
+			}
+		}
+	}
+	.cat-1,
+	.cat-2,
+	.cat-3 {
+		position: relative;
+		overflow: hidden;
+		.bg {
+			background-repeat: no-repeat;
+			background-size: 900px;
+			display: block;
+			position: absolute;
+			width: 100%;
+			height: 100%;
+		}
+	}
+	.cat-1 {
+		.bg {
+			background-image: url(https://illegalanimalpoaching.files.wordpress.com/2013/04/animals-wallpapers-912.jpg);			
+			background-position: left 50%;
+		}
+	}
+	.cat-2 {
+		.bg {
+			background-image: url(http://www.hd-wallpapersdownload.com/upload/bulk-upload/desktop-best-photos-of-animals-wallpaper.jpg);
+			background-position: center 50%;
+		}
+	}
+	.cat-3 {
+		.bg {
+			background-image: url(http://images6.fanpop.com/image/photos/34900000/Cute-Panda-Bears-animals-34915026-1600-1200.jpg);
+			background-position: right 50%;
+		}
+	}
+}
